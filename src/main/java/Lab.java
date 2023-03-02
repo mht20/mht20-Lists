@@ -1,5 +1,8 @@
 
+import java.util.ArrayList;
 import java.util.List;
+
+import kotlin.contracts.Returns;
 
 /**
  * Lists are ordered collections. This means that we could access elements at a certain position of a list,
@@ -26,10 +29,15 @@ public class Lab {
      *
      * A popular implementation of List is ArrayList. Look up how to instantiate one.
      *
-     * @return a List<Integer> object.
+     * @return a ArrayList object.
      */
     public List<Integer> createList(){
-        return null;
+        
+        //creating a ArrayList
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        return list; //ok
+        
+        
     }
 
     /**
@@ -39,7 +47,11 @@ public class Lab {
      * @return the size of List (number of items it holds.)
      */
     public int getSize(List<Integer> list){
-        return 0;
+        //System.out.println(list.size());
+        //return Integer.max(1, 2);
+        //return Integer.SIZE;
+        //return list.size();
+        return list.size();//ok
     }
 
     /**
@@ -51,6 +63,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
+        list.add(value); //ok
+        
     }
 
     /**
@@ -66,7 +80,8 @@ public class Lab {
      * @return the int at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return 0;
+        //return list.get(index);
+        return list.get(index); //ok
     }
 
     /**
@@ -79,6 +94,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
+       //list.remove(3);
+        list.remove(position);//ok
 
     }
 
@@ -92,5 +109,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+       list.set(position,value);
+       //list.set(position, 7); //ok 
+       //list.set(value, position);
     }
 }
